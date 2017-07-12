@@ -41,9 +41,18 @@ ssh someone@192.168.1.1
 ssh: connect to host 192.168.1.1 port 22: Connection refused
 ```
 
-Solution:
+Solution(I forgot to add this rule):<br/>
+https://serverfault.com/questions/667731/centos-7-firewalld-remove-direct-rule
 ``` bash
+firewall-cmd --permanent --zone=public --add-port=12345/tcp
 
+firewall-cmd --reload
+```
+
+During above operation, I added wrong port, the solution is remove the wrong port by follwing command:<br/>
+https://www.linode.com/docs/security/firewalls/introduction-to-firewalld-on-centos
+``` bash
+sudo firewall-cmd --zone=public --remove-port=12345/tcp --permanent
 ```
 
 
