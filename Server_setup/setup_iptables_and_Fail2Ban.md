@@ -25,6 +25,13 @@ Common Command in `firewalld`
 ``` bash
 # start the daemon for this session
 sudo systemctl start firewalld.service
+# or(another version from [1])
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+
+# stop firewalld
+sudo systemctl stop firewalld
+sudo systemctl disable firewalld
 
 #  verify that the service is running and reachable
 firewall-cmd --state
@@ -56,15 +63,35 @@ sudo firewall-cmd --zone=public --permanent --add-port=5000/tcp
 sudo systemctl restart firewalld.service
 ```
 
-References about firewalld and iptables:
+References about firewalld and iptables:<br/>
 [1] https://www.linode.com/docs/security/firewalls/introduction-to-firewalld-on-centos<br/>
-
 [2] https://www.linode.com/docs/networking/firewalls/control-network-traffic-with-iptables<br/>
-
 [3] https://www.digitalocean.com/community/tutorials/how-to-migrate-from-firewalld-to-iptables-on-centos-7<br/>
-
 [4] https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands<br/>
-
 [5] https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-using-firewalld-on-centos-7<br/>
 [6] https://jpopelka.fedorapeople.org/firewalld/doc/firewalld.richlanguage.html<br/>
 [7] https://fedoraproject.org/wiki/Features/FirewalldRichLanguage
+
+## Fail2ban
+
+https://www.digitalocean.com/community/tutorials/how-to-protect-ssh-with-fail2ban-on-centos-7
+
+``` bash
+# install
+sudo yum install epel-release
+sudo yum install fail2ban
+
+# restart
+sudo systemctl restart fail2ban
+
+# status
+sudo fail2ban-client status
+```
+
+`fail2ban` configration files are applied in the following order:
+``` bash
+/etc/fail2ban/jail.conf
+/etc/fail2ban/jail.d/*.conf, alphabetically
+/etc/fail2ban/jail.local
+/etc/fail2ban/jail.d/*.local, alphabetically
+```
