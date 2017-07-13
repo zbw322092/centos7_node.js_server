@@ -65,7 +65,11 @@ https://support.rackspace.com/how-to/connecting-to-linux-from-mac-os-x-by-using-
 2. AllowUsers<br/>
 https://wiki.centos.org/HowTos/Network/SecuringSSH
 
-3. ifconfig in centos 7
-https://unix.stackexchange.com/questions/145447/ifconfig-command-not-found
+3. ifconfig in centos 7<br/>
+https://unix.stackexchange.com/questions/145447/ifconfig-command-not-found<br/>
+
+Further Reading:
+[1] https://www.digitalocean.com/community/tutorials/initial-server-setup-with-centos-7<br/>
+
 
 
