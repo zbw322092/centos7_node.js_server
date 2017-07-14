@@ -61,6 +61,11 @@ References:<br/>
 [1] https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms<br/>
 
 
+Check `nginx` config syntax
+``` bash
+sudo nginx -t
+```
+
 Reload `nginx`
 ``` bash
 sudo nginx -s reload
@@ -70,3 +75,23 @@ Check `nginx` status
 ``` bash
 sudo systemctl status nginx
 ```
+
+
+If you encounter problems about `nginx`(In my case, I got *502 Bad Gateway*), you can check `nginx` logs like this:
+``` bash
+sudo tail -30 /var/log/nginx/error.log
+```
+I solved my problem using [following](https://stackoverflow.com/questions/23948527/13-permission-denied-while-connecting-to-upstreamnginx) solution:
+``` bash
+sudo setsebool -P httpd_can_network_connect 1
+```
+
+*502 Bad Gateway* diagram demonstration:<br/>
+https://www.datadoghq.com/blog/nginx-502-bad-gateway-errors-php-fpm/
+
+
+Further reading:<br/>
+[1] https://www.nginx.com/resources/admin-guide/reverse-proxy/<br/>
+[2] http://nginx.org/en/docs/http/ngx_http_proxy_module.html?&_ga=2.138917499.977488074.1500038611-775240997.1500038611#proxy_set_header
+
+
