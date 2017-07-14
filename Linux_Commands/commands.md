@@ -14,4 +14,15 @@ yum update && yum upgrade
 https://www.tecmint.com/things-to-do-after-minimal-rhel-centos-7-installation/
 
 3.
+Network Interface
+``` bash
+ip addr
+```
+
+4.
+Delete folder
+``` bash
+rm -rf mydir
+```
+https://www.computerhope.com/issues/ch000798.htm
 
