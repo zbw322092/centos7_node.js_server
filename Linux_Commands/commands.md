@@ -34,3 +34,6 @@ wget "http://domain.com/directory/4?action=AttachFile&do=view&target=file.tgz"
 ```
 
 https://askubuntu.com/questions/207265/how-to-download-a-file-from-a-website-via-terminal
+
+
+
