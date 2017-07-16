@@ -76,6 +76,13 @@ Check `nginx` status
 sudo systemctl status nginx
 ```
 
+Hide `nginx` version info.
+add following command in `nginx.conf` file.
+``` bash
+server_tokens off;
+```
+https://www.atulhost.com/hide-nginx-version
+
 
 If you encounter problems about `nginx`(In my case, I got *502 Bad Gateway*), you can check `nginx` logs like this:
 ``` bash
