@@ -23,6 +23,26 @@ $ scp -P 2344 myfile.txt root@example.com:/opt/myfile.txt
 More on `scp`: https://b.oray.com/forward/
 
 
+How, Decompressing `tar` file on server.
+``` bash
+sudo tar xvf MyTecBlogDump-2017-07-16.tar.gz
+```
+
+Execute `sql` file.
+We get an uncompressed `sql` file now. We need to execute it. Taking follwing steps:
+First of all, log in MySQL, and then create an database(since the sql file we created just contains tables create commands).
+``` SQL
+mysql> create database My_DB;
+
+mysql> show databases;
+
+mysql> use My_DB;
+```
+After creating a database, we execute `.sql` file in it. [Read It.](https://dev.mysql.com/doc/refman/5.7/en/mysql-batch-commands.html)
+``` SQL
+mysql> source file_name
+```
+
 
 
 
