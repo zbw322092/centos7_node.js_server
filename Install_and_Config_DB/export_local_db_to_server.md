@@ -20,7 +20,9 @@ For Example:
 ``` bash
 $ scp -P 2344 myfile.txt root@example.com:/opt/myfile.txt
 ```
-More on `scp`: https://b.oray.com/forward/
+More on `scp`: 
+[1] 12 scp command examples to transfer files on Linux <br>
+
 
 
 How, Decompressing `tar` file on server.

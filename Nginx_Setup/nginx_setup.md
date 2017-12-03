@@ -102,3 +102,9 @@ Further reading:<br/>
 [2] http://nginx.org/en/docs/http/ngx_http_proxy_module.html?&_ga=2.138917499.977488074.1500038611-775240997.1500038611#proxy_set_header
 
 
+##todo
+[1]  How To Set Up a Node.js Application for Production on Ubuntu 16.04
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04 <br>
+
+[2] Virtual Hosts on nginx (CSC309)
+https://gist.github.com/soheilhy/8b94347ff8336d971ad0 <br>
